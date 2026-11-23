@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Drive | Premium Car Rental in Ambikapur, Surguja</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        obsidian: '#0a0a0a',
+                        charcoal: '#121212',
+                        carddark: '#161616',
+                        gold: {
+                            light: '#F3E5AB',
+                            DEFAULT: '#D4AF37',
+                            dark: '#AA771C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Luxury Gold Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA771C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Luxury Gold Gradient Button */
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AA771C 100%);
+            background-size: 200% auto;
+            color: #0a0a0a;
+            transition: all 0.4s ease;
+        }
+        .btn-gold:hover {
+            background-position: right center;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+            transform: translateY(-2px);
+        }
+
+        /* Glassmorphism Dark Cards */
+        .glass-card {
+            background: rgba(22, 22, 22, 0.75);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.55);
+            box-shadow: 0 12px 35px -10px rgba(212, 175, 55, 0.18);
+            transform: translateY(-4px);
+        }
+
+        /* Subtle Ambient Gold Glow */
+        .hero-glow {
+            background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.14) 0%, rgba(10, 10, 10, 0) 65%);
+        }
+
+        /* Custom Date Input Styling for Dark Mode */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.8) sepia(1) saturate(3) hue-rotate(10deg);
+            cursor: pointer;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2b2618;
+            border: 1px solid #AA771C;
+            border-radius: 999px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-obsidian">
+
+    <!-- ==================== 1. STICKY NAVIGATION BAR ==================== -->
+    <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-light via-gold to-gold-dark p-[1.5px] shadow-lg shadow-gold/10">
+                        <div class="w-full h-full bg-obsidian rounded-[10px] flex items-center justify-center">
+                            <!-- Custom Luxury Car Crest SVG -->
+                            <svg class="w-7 h-7 text-gold group-hover:scale-105 transition-transform" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 15.5C3 14.2 3.8 13.1 5 12.7L9.5 11.2L13.2 6.8C14.1 5.7 15.5 5 17 5H23.5C25.2 5 26.8 5.9 27.7 7.3L30.2 11.3L32.8 12.3C34.1 12.8 35 14 35 15.4V17.5C35 18.3 34.3 19 33.5 19H31.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M12.5 19H23.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M1 19H4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <circle cx="8.5" cy="19" r="3" stroke="#F3E5AB" stroke-width="1.8"/>
+                                <circle cx="27.5" cy="19" r="3" stroke="#F3E5AB" stroke-width="1.8"/>
+                                <path d="M11 11H26" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.7"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-serif font-extrabold text-xl sm:text-2xl tracking-wider text-gold-gradient block leading-none">
+                            TRUST DRIVE
+                        </span>
+                        <span class="text-[10px] uppercase tracking-[0.25em] text-neutral-400 block mt-1">
+                            Ambikapur • Surguja
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-neutral-300">
+                    <a href="#home" class="hover:text-gold transition-colors">Home</a>
+                    <a href="#services" class="hover:text-gold transition-colors">Services</a>
+                    <a href="#fleet" class="hover:text-gold transition-colors">Fleet & Rates</a>
+                    <a href="#booking" class="hover:text-gold transition-colors">Book Now</a>
+                    <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop Quick Action Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:+919111667692" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gold/40 text-gold-light hover:bg-gold/10 text-xs sm:text-sm font-semibold transition-all">
+                        <i data-lucide="phone-call" class="w-4 h-4 text-gold"></i>
+                        <span>Call Now</span>
+                    </a>
+                    <a href="https://wa.me/919111667692?text=Hello%20Trust%20Drive%2C%20I%20would%20like%20to%20inquire%20about%20a%20car%20rental%20in%20Ambikapur." target="_blank" rel="noopener noreferrer" class="btn-gold inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold shadow-md">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl border border-gold/30 text-gold hover:bg-gold/10 transition-colors">
+                    <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-charcoal border-b border-gold/20 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-lg text-neutral-200 hover:bg-gold/10 hover:text-gold font-medium">Home</a>
+            <a href="#services" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-lg text-neutral-200 hover:bg-gold/10 hover:text-gold font-medium">Services</a>
+            <a href="#fleet" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-lg text-neutral-200 hover:bg-gold/10 hover:text-gold font-medium">Fleet & Rates</a>
+            <a href="#booking" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-lg text-neutral-200 hover:bg-gold/10 hover:text-gold font-medium">Book Now</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="block py-2.5 px-3 rounded-lg text-neutral-200 hover:bg-gold/10 hover:text-gold font-medium">Contact</a>
+            
+            <div class="pt-3 grid grid-cols-2 gap-3 border-t border-neutral-800">
+                <a href="tel:+919111667692" class="flex items-center justify-center gap-2 py-3 rounded-xl border border-gold/40 text-gold-light text-sm font-semibold">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Call Now
+                </a>
+                <a href="https://wa.me/919111667692?text=Hello%20Trust%20Drive%2C%20I%20want%20to%20book%20a%20car." target="_blank" rel="noopener noreferrer" class="btn-gold flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="home" class="relative pt-14 pb-20 sm:pt-24 sm:pb-28 hero-glow overflow-hidden">
+        <!-- Decorative Grid Overlay -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#d4af370a_1px,transparent_1px),linear-gradient(to_bottom,#d4af370a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_30%,#000_60%,transparent_100%)] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Tagline Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                    <span class="text-xs sm:text-sm font-semibold tracking-[0.18em] text-gold-light uppercase">
+                        Premium Car Rental in Ambikapur, Surguja
+                    </span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.12] mb-6">
+                    Drive Your Way with <br class="hidden sm:block" />
+                    <span class="text-gold-gradient">Trust & Luxury</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-base sm:text-xl text-neutral-300 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
+                    Reliable <span class="text-white font-semibold">Self-Drive</span> &amp; <span class="text-white font-semibold">Chauffeur-Driven</span> Cars for Local, Outstation, Wedding &amp; Airport Transfers across Chhattisgarh.
+                </p>
+
+                <!-- Dual CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+                    <a href="#booking" class="btn-gold w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-base flex items-center justify-center gap-2.5 shadow-xl">
+                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                        <span>Book a Car</span>
+                    </a>
+                    <a href="https://wa.me/919111667692?text=Hello%20Trust%20Drive%20Ambikapur%2C%20I%20would%20like%20to%20make%20an%20instant%20car%20booking." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-charcoal hover:bg-neutral-900 border border-gold/40 hover:border-gold text-white font-semibold text-base flex items-center justify-center gap-2.5 transition-all">
+                        <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+                        <span>WhatsApp Instant Booking</span>
+                    </a>
+                </div>
+
+                <!-- Luxury Silhouette Divider Illustration -->
+                <div class="max-w-2xl mx-auto mb-12 opacity-90">
+                    <svg viewBox="0 0 800 130" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                        <defs>
+                            <linearGradient id="carGoldLine" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#D4AF37" stop-opacity="0"/>
+                                <stop offset="25%" stop-color="#D4AF37" stop-opacity="0.8"/>
+                                <stop offset="50%" stop-color="#F3E5AB" stop-opacity="1"/>
+                                <stop offset="75%" stop-color="#D4AF37" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <!-- Sleek Aerodynamic Car Profile Line -->
+                        <path d="M120 88C165 86 215 72 268 48C325 22 415 20 495 36C555 48 605 64 665 74C690 78 705 84 710 92" stroke="url(#carGoldLine)" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M235 64C295 42 425 36 525 56" stroke="#D4AF37" stroke-opacity="0.35" stroke-width="1.5" stroke-linecap="round"/>
+                        <!-- Ground Reflection Line -->
+                        <line x1="60" y1="98" x2="740" y2="98" stroke="url(#carGoldLine)" stroke-width="1.5"/>
+                        <circle cx="235" cy="94" r="14" stroke="#D4AF37" stroke-width="1.5" stroke-opacity="0.5"/>
+                        <circle cx="585" cy="94" r="14" stroke="#D4AF37" stroke-width="1.5" stroke-opacity="0.5"/>
+                    </svg>
+                </div>
+
+                <!-- 4 Trust Badges -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-left">
+                    <div class="glass-card p-4 rounded-2xl flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center shrink-0 text-gold">
+                            <i data-lucide="clock" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">24/7 Support</div>
+                            <div class="text-xs text-neutral-400">Always available</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center shrink-0 text-gold">
+                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Sanitized Fleet</div>
+                            <div class="text-xs text-neutral-400">Clean &amp; maintained</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center shrink-0 text-gold">
+                            <i data-lucide="indian-rupee" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Transparent Pricing</div>
+                            <div class="text-xs text-neutral-400">Zero hidden charges</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-4 rounded-2xl flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center shrink-0 text-gold">
+                            <i data-lucide="file-check-2" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Easy Documentation</div>
+                            <div class="text-xs text-neutral-400">Quick 5-min handover</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. SERVICES SECTION (5 CARDS) ==================== -->
+    <section id="services" class="py-20 bg-charcoal border-y border-gold/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Tailored Mobility</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2 mb-4">
+                    Our Signature <span class="text-gold-gradient">Services</span>
+                </h2>
+                <p class="text-neutral-400 text-sm sm:text-base">
+                    Whether you want the freedom of driving yourself or the comfort of a professional chauffeur, Trust Drive delivers excellence across Surguja &amp; Chhattisgarh.
+                </p>
+            </div>
+
+            <!-- 5 Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Service 1: Self-Drive Cars -->
+                <div class="glass-card p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold/25 to-gold-dark/10 border border-gold/30 flex items-center justify-center text-gold mb-6">
+                            <i data-lucide="key-round" class="w-7 h-7"></i>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif text-xl font-bold text-white">Self-Drive Cars</h3>
+                            <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-gold/15 text-gold-light border border-gold/25">Bina Driver</span>
+                        </div>
+                        <p class="text-sm text-neutral-400 leading-relaxed">
+                            Freedom to drive at your own pace with complete privacy and flexible daily packages. Ideal for personal errands, weekend getaways, and business visits.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-gold-light font-semibold">
+                        <span>Valid DL &amp; ID Required</span>
+                        <a href="#booking" onclick="preselectService('Self-Drive')" class="inline-flex items-center gap-1 hover:underline">
+                            Book Now <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: With Driver / Chauffeur -->
+                <div class="glass-card p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold/25 to-gold-dark/10 border border-gold/30 flex items-center justify-center text-gold mb-6">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif text-xl font-bold text-white">With Driver / Chauffeur</h3>
+                            <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-gold/15 text-gold-light border border-gold/25">Driver ke Saath</span>
+                        </div>
+                        <p class="text-sm text-neutral-400 leading-relaxed">
+                            Experienced, polite, and verified local &amp; highway drivers for completely stress-free travel. Sit back and relax while we handle the traffic and routes.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-gold-light font-semibold">
+                        <span>Verified Local Chauffeurs</span>
+                        <a href="#booking" onclick="preselectService('With Driver')" class="inline-flex items-center gap-1 hover:underline">
+                            Book Now <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Outstation / Tour Packages -->
+                <div class="glass-card p-7 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold/25 to-gold-dark/10 border border-gold/30 flex items-center justify-center text-gold mb-6">
+                            <i data-lucide="compass" class="w-7 h-7"></i>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif text-xl font-bold text-white">Outstation / Tour Packages</h3>
+                        </div>
+                        <p class="text-sm text-neutral-400 leading-relaxed">
+                            Comfortable round-trips &amp; multi-day tours across Chhattisgarh &amp; neighboring states (Mainpat, Raipur, Bilaspur, Ranchi, Varanasi &amp; more).
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-gold-light font-semibold">
+                        <span>Mainpat &amp; All-CG Tours</span>
+                        <a href="#booking" onclick="preselectService('Outstation')" class="inline-flex items-center gap-1 hover:underline">
+                            Book Now <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Wedding / Luxury Car Rental -->
+                <div class="glass-card p-7 rounded-2xl flex flex-col justify-between lg:col-span-1">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold/25 to-gold-dark/10 border border-gold/30 flex items-center justify-center text-gold mb-6">
+                            <i data-lucide="crown" class="w-7 h-7"></i>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <h3 class="font-serif text-xl font-bold text-white">Wedding / Luxury Rental</h3>
+                        </div>
+                        <p class="text-sm text-neutral-400 leading-relaxed">
+                            Spotless, decorated &amp; well-maintained cars for Barat, bridal entry, VIP guests, and special family celebrations in Ambikapur &amp; nearby towns.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-gold-light font-semibold">
+                        <span>VIP &amp; Barat Fleet</span>
+                        <a href="#booking" onclick="preselectService('Wedding')" class="inline-flex items-center gap-1 hover:underline">
+                            Book Now <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Airport / Railway Pickup & Drop -->
+                <div class="glass-card p-7 rounded-2xl flex flex-col justify-between md:col-span-2 lg:col-span-2">
+                    <div class="flex flex-col sm:flex-row sm:items-start gap-6">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold/25 to-gold-dark/10 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                            <i data-lucide="plane-takeoff" class="w-7 h-7"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <h3 class="font-serif text-xl font-bold text-white">Airport / Railway Pickup &amp; Drop</h3>
+                                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">24/7 On-Time Guarantee</span>
+                            </div>
+                            <p class="text-sm text-neutral-400 leading-relaxed">
+                                Punctual 24/7 transfers to <strong class="text-neutral-200">Ambikapur Railway Station</strong>, <strong class="text-neutral-200">Maa Mahamaya Airport (Darima)</strong>, <strong class="text-neutral-200">Swami Vivekananda Airport (Raipur)</strong> &amp; <strong class="text-neutral-200">Birsa Munda Airport (Ranchi)</strong>. Never miss a flight or train again.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between text-xs text-gold-light font-semibold">
+                        <span>Ambikapur • Darima • Raipur • Ranchi</span>
+                        <a href="#booking" onclick="preselectService('Airport/Railway Pickup & Drop')" class="inline-flex items-center gap-1 hover:underline">
+                            Schedule Transfer <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. OUR FLEET & RATES SECTION ==================== -->
+    <section id="fleet" class="py-20 bg-obsidian relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Well-Maintained Vehicles</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2 mb-4">
+                    Our Fleet &amp; <span class="text-gold-gradient">Daily Rates</span>
+                </h2>
+                <p class="text-neutral-400 text-sm sm:text-base">
+                    Choose from our clean, sanitized, and fuel-efficient fleet. Click <span class="text-gold-light font-medium">"Book This Car"</span> to instantly select your vehicle.
+                </p>
+            </div>
+
+            <!-- 3 Fleet Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Car 1: Hatchback -->
+                <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <!-- Custom Luxury Car Visual Card Header -->
+                        <div class="relative h-48 bg-gradient-to-b from-neutral-900 to-obsidian p-6 flex flex-col justify-between border-b border-gold/15">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold/15 text-gold-light border border-gold/30">
+                                    City &amp; Budget Friendly
+                                </span>
+                                <span class="text-xs font-semibold text-neutral-400">Hatchback</span>
+                            </div>
+
+                            <!-- Custom Hatchback Vector Illustration -->
+                            <div class="my-auto flex justify-center">
+                                <svg class="w-56 h-24 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 260 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="130" cy="86" rx="105" ry="6" fill="#D4AF37" fill-opacity="0.12"/>
+                                    <path d="M32 68C32 61 37 55 44 53L68 46L95 26C103 20 113 17 123 17H168C180 17 191 23 197 33L212 52L224 56C229 58 232 63 232 68V74C232 77 229 80 226 80H210" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round"/>
+                                    <path d="M84 80H176" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round"/>
+                                    <path d="M26 80H48" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round"/>
+                                    <path d="M82 46L103 28H164L183 46H82Z" fill="#D4AF37" fill-opacity="0.12" stroke="#F3E5AB" stroke-width="1.4"/>
+                                    <line x1="134" y1="28" x2="134" y2="46" stroke="#D4AF37" stroke-width="1.4"/>
+                                    <circle cx="66" cy="80" r="14" fill="#121212" stroke="#F3E5AB" stroke-width="2.2"/>
+                                    <circle cx="66" cy="80" r="6" stroke="#D4AF37" stroke-width="1.5"/>
+                                    <circle cx="193" cy="80" r="14" fill="#121212" stroke="#F3E5AB" stroke-width="2.2"/>
+                                    <circle cx="193" cy="80" r="6" stroke="#D4AF37" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-7">
+                            <div class="flex items-baseline justify-between gap-2 mb-1">
+                                <h3 class="font-serif text-2xl font-bold text-white">Hatchback</h3>
+                                <div class="text-right">
+                                    <span class="text-2xl sm:text-3xl font-extrabold text-gold-gradient">₹1,200</span>
+                                    <span class="text-xs text-neutral-400 block">/ day</span>
+                                </div>
+                            </div>
+                            <p class="text-sm font-medium text-gold-light mb-5">Swift / WagonR</p>
+
+                            <!-- Specs Pills -->
+                            <div class="grid grid-cols-3 gap-2 mb-5">
+                                <div class="bg-obsidian/90 border border-neutral-800 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="users" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">5 Seater</span>
+                                </div>
+                                <div class="bg-obsidian/90 border border-neutral-800 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="settings-2" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">Manual/Auto</span>
+                                </div>
+                                <div class="bg-obsidian/90 border border-neutral-800 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="snowflake" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">Chilled AC</span>
+                                </div>
+                            </div>
+
+                            <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                                Ideal for City &amp; Budget Trips. Easy to park, high mileage, and smooth handling for Ambikapur local &amp; short highway runs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-7 pb-7">
+                        <button onclick="selectCarAndScroll('Hatchback - Swift/WagonR ₹1200/day')" class="w-full py-3.5 px-5 rounded-xl border border-gold text-gold-light hover:bg-gold hover:text-obsidian font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <span>Book This Car</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Car 2: Sedan (Most Popular) -->
+                <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group border-gold/50 relative shadow-2xl shadow-gold/10">
+                    <!-- Popular Ribbon -->
+                    <div class="bg-gradient-to-r from-gold-dark via-gold to-gold-light text-obsidian text-center text-[11px] font-extrabold uppercase tracking-widest py-1.5">
+                        ★ Most Popular Choice ★
+                    </div>
+
+                    <div>
+                        <div class="relative h-48 bg-gradient-to-b from-neutral-900 to-obsidian p-6 flex flex-col justify-between border-b border-gold/15">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold/20 text-gold-light border border-gold/40">
+                                    Family &amp; Business
+                                </span>
+                                <span class="text-xs font-semibold text-neutral-400">Executive Sedan</span>
+                            </div>
+
+                            <!-- Custom Sedan Vector Illustration -->
+                            <div class="my-auto flex justify-center">
+                                <svg class="w-60 h-24 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 280 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="140" cy="86" rx="118" ry="6" fill="#D4AF37" fill-opacity="0.16"/>
+                                    <path d="M22 68C22 61 28 55 35 53L66 45L98 25C107 19 118 17 129 17H178C190 17 201 22 209 31L226 48L248 53C254 55 258 60 258 66V74C258 77 255 80 251 80H230" stroke="#F3E5AB" stroke-width="2.2" stroke-linecap="round"/>
+                                    <path d="M84 80H196" stroke="#F3E5AB" stroke-width="2.2" stroke-linecap="round"/>
+                                    <path d="M18 80H46" stroke="#F3E5AB" stroke-width="2.2" stroke-linecap="round"/>
+                                    <path d="M80 45L105 26H176L202 45H80Z" fill="#D4AF37" fill-opacity="0.16" stroke="#D4AF37" stroke-width="1.4"/>
+                                    <line x1="142" y1="26" x2="142" y2="45" stroke="#F3E5AB" stroke-width="1.4"/>
+                                    <circle cx="65" cy="80" r="14" fill="#121212" stroke="#D4AF37" stroke-width="2.4"/>
+                                    <circle cx="65" cy="80" r="6" stroke="#F3E5AB" stroke-width="1.5"/>
+                                    <circle cx="213" cy="80" r="14" fill="#121212" stroke="#D4AF37" stroke-width="2.4"/>
+                                    <circle cx="213" cy="80" r="6" stroke="#F3E5AB" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="p-7">
+                            <div class="flex items-baseline justify-between gap-2 mb-1">
+                                <h3 class="font-serif text-2xl font-bold text-white">Sedan</h3>
+                                <div class="text-right">
+                                    <span class="text-2xl sm:text-3xl font-extrabold text-gold-gradient">₹1,500</span>
+                                    <span class="text-xs text-neutral-400 block">/ day</span>
+                                </div>
+                            </div>
+                            <p class="text-sm font-medium text-gold-light mb-5">Swift Dzire / Hyundai Aura</p>
+
+                            <div class="grid grid-cols-3 gap-2 mb-5">
+                                <div class="bg-obsidian/90 border border-gold/25 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="users" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">5 Seater</span>
+                                </div>
+                                <div class="bg-obsidian/90 border border-gold/25 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="briefcase" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">Big Boot</span>
+                                </div>
+                                <div class="bg-obsidian/90 border border-gold/25 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="snowflake" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">Rear AC</span>
+                                </div>
+                            </div>
+
+                            <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                                Best for Family &amp; Business Travel. Plush seating, generous boot space for airport luggage, and superior highway comfort.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-7 pb-7">
+                        <button onclick="selectCarAndScroll('Sedan - Dzire/Aura ₹1500/day')" class="btn-gold w-full py-3.5 px-5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 cursor-pointer shadow-lg">
+                            <span>Book This Car</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Car 3: SUV 7-Seater -->
+                <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                    <div>
+                        <div class="relative h-48 bg-gradient-to-b from-neutral-900 to-obsidian p-6 flex flex-col justify-between border-b border-gold/15">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3 py-1 rounded-full text-xs font-bold bg-gold/15 text-gold-light border border-gold/30">
+                                    Outstation &amp; Group
+                                </span>
+                                <span class="text-xs font-semibold text-neutral-400">7-Seater MPV / SUV</span>
+                            </div>
+
+                            <!-- Custom 7-Seater SUV/MPV Vector Illustration -->
+                            <div class="my-auto flex justify-center">
+                                <svg class="w-64 h-24 group-hover:scale-105 transition-transform duration-500" viewBox="0 0 290 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <ellipse cx="145" cy="87" rx="122" ry="6" fill="#D4AF37" fill-opacity="0.14"/>
+                                    <path d="M22 68C22 60 28 53 36 51L66 43L94 21C102 15 112 13 122 13H215C227 13 237 20 242 31L253 50L262 54C266 56 268 60 268 65V74C268 77 265 80 261 80H240" stroke="#D4AF37" stroke-width="2.3" stroke-linecap="round"/>
+                                    <path d="M84 80H204" stroke="#D4AF37" stroke-width="2.3" stroke-linecap="round"/>
+                                    <path d="M18 80H46" stroke="#D4AF37" stroke-width="2.3" stroke-linecap="round"/>
+                                    <path d="M80 43L102 22H214L232 43H80Z" fill="#D4AF37" fill-opacity="0.14" stroke="#F3E5AB" stroke-width="1.4"/>
+                                    <line x1="138" y1="22" x2="138" y2="43" stroke="#D4AF37" stroke-width="1.4"/>
+                                    <line x1="184" y1="22" x2="184" y2="43" stroke="#D4AF37" stroke-width="1.4"/>
+                                    <circle cx="65" cy="80" r="15" fill="#121212" stroke="#F3E5AB" stroke-width="2.3"/>
+                                    <circle cx="65" cy="80" r="6.5" stroke="#D4AF37" stroke-width="1.5"/>
+                                    <circle cx="222" cy="80" r="15" fill="#121212" stroke="#F3E5AB" stroke-width="2.3"/>
+                                    <circle cx="222" cy="80" r="6.5" stroke="#D4AF37" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="p-7">
+                            <div class="flex items-baseline justify-between gap-2 mb-1">
+                                <h3 class="font-serif text-2xl font-bold text-white">SUV 7-Seater</h3>
+                                <div class="text-right">
+                                    <span class="text-2xl sm:text-3xl font-extrabold text-gold-gradient">₹2,000</span>
+                                    <span class="text-xs text-neutral-400 block">/ day</span>
+                                </div>
+                            </div>
+                            <p class="text-sm font-medium text-gold-light mb-5">Maruti Ertiga / Toyota Rumion</p>
+
+                            <div class="grid grid-cols-3 gap-2 mb-5">
+                                <div class="bg-obsidian/90 border border-neutral-800 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="users" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">7 Seater</span>
+                                </div>
+                                <div class="bg-obsidian/90 border border-neutral-800 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="wind" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">Dual AC</span>
+                                </div>
+                                <div class="bg-obsidian/90 border border-neutral-800 rounded-xl p-2.5 text-center">
+                                    <i data-lucide="luggage" class="w-4 h-4 text-gold mx-auto mb-1"></i>
+                                    <span class="text-xs font-semibold text-neutral-200 block">Spacious</span>
+                                </div>
+                            </div>
+
+                            <p class="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                                Perfect for Outstation &amp; Group Tours. Three-row comfort, roof-mounted AC vents, and flexible luggage space for big families.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-7 pb-7">
+                        <button onclick="selectCarAndScroll('SUV 7-Seater - Ertiga/Rumion ₹2000/day')" class="w-full py-3.5 px-5 rounded-xl border border-gold text-gold-light hover:bg-gold hover:text-obsidian font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <span>Book This Car</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Transparent Pricing Note -->
+            <div class="mt-10 glass-card rounded-2xl p-5 sm:p-6 border-gold/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-start sm:items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                        <i data-lucide="info" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-gold-light">Transparent Pricing Policy</h4>
+                        <p class="text-xs sm:text-sm text-neutral-300 mt-0.5">
+                            Rates shown are daily base rentals (Fuel excluded). <span class="text-white font-medium">Customizable per-km packages, driver allowance &amp; multi-day discounts</span> are available on call.
+                        </p>
+                    </div>
+                </div>
+                <a href="tel:+919111667692" class="shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gold/15 hover:bg-gold/25 border border-gold/40 text-gold-light text-xs font-bold transition-colors">
+                    <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                    <span>Ask Custom Rate</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. INTERACTIVE WEBSITE BOOKING FORM ==================== -->
+    <section id="booking" class="py-20 bg-charcoal border-t border-gold/15 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Instant Reservation</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2 mb-3">
+                    Reserve Your <span class="text-gold-gradient">Ride Today</span>
+                </h2>
+                <p class="text-neutral-400 text-sm sm:text-base">
+                    Fill in your trip details below. Send directly via WhatsApp for fastest confirmation or submit an instant booking request.
+                </p>
+            </div>
+
+            <!-- Form Card -->
+            <div class="glass-card rounded-3xl p-6 sm:p-10 border-gold/30 shadow-2xl">
+                <form id="booking-form" onsubmit="handleInstantRequest(event)" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Customer Name -->
+                        <div>
+                            <label for="customer-name" class="block text-xs font-bold uppercase tracking-wider text-gold-light mb-2">
+                                Full Name *
+                            </label>
+                            <div class="relative">
+                                <i data-lucide="user" class="w-4 h-4 text-gold/70 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                                <input type="text" id="customer-name" required placeholder="Enter your full name"
+                                       class="w-full bg-obsidian border border-neutral-700 focus:border-gold rounded-xl pl-10 pr-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Mobile / WhatsApp Number -->
+                        <div>
+                            <label for="customer-phone" class="block text-xs font-bold uppercase tracking-wider text-gold-light mb-2">
+                                Mobile / WhatsApp Number *
+                            </label>
+                            <div class="relative">
+                                <i data-lucide="phone" class="w-4 h-4 text-gold/70 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                                <input type="tel" id="customer-phone" required placeholder="e.g. 9876543210"
+                                       class="w-full bg-obsidian border border-neutral-700 focus:border-gold rounded-xl pl-10 pr-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Select Car -->
+                        <div>
+                            <label for="select-car" class="block text-xs font-bold uppercase tracking-wider text-gold-light mb-2">
+                                Select Car *
+                            </label>
+                            <div class="relative">
+                                <i data-lucide="car" class="w-4 h-4 text-gold/70 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                                <select id="select-car" required
+                                        class="w-full bg-obsidian border border-neutral-700 focus:border-gold rounded-xl pl-10 pr-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all appearance-none">
+                                    <option value="Hatchback - Swift/WagonR ₹1200/day">Hatchback - Swift/WagonR (₹1,200/day)</option>
+                                    <option value="Sedan - Dzire/Aura ₹1500/day" selected>Sedan - Dzire/Aura (₹1,500/day)</option>
+                                    <option value="SUV 7-Seater - Ertiga/Rumion ₹2000/day">SUV 7-Seater - Ertiga/Rumion (₹2,000/day)</option>
+                                </select>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-gold absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                        <!-- Service Type -->
+                        <div>
+                            <label for="service-type" class="block text-xs font-bold uppercase tracking-wider text-gold-light mb-2">
+                                Service Type *
+                            </label>
+                            <div class="relative">
+                                <i data-lucide="briefcase" class="w-4 h-4 text-gold/70 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                                <select id="service-type" required
+                                        class="w-full bg-obsidian border border-neutral-700 focus:border-gold rounded-xl pl-10 pr-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all appearance-none">
+                                    <option value="Self-Drive">Self-Drive (Bina Driver)</option>
+                                    <option value="With Driver">With Driver (Driver ke Saath)</option>
+                                    <option value="Outstation">Outstation / Tour Package</option>
+                                    <option value="Wedding">Wedding / Luxury Rental</option>
+                                    <option value="Airport/Railway Pickup & Drop">Airport / Railway Pickup &amp; Drop</option>
+                                </select>
+                                <i data-lucide="chevron-down" class="w-4 h-4 text-gold absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                        <!-- Pickup Location -->
+                        <div class="sm:col-span-2">
+                            <label for="pickup-location" class="block text-xs font-bold uppercase tracking-wider text-gold-light mb-2">
+                                Pickup Location *
+                            </label>
+                            <div class="relative">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-gold/70 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                                <input type="text" id="pickup-location" required placeholder="Ambikapur" value="Ambikapur"
+                                       class="w-full bg-obsidian border border-neutral-700 focus:border-gold rounded-xl pl-10 pr-4 py-3.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Pickup Date -->
+                        <div>
+                            <label for="pickup-date" class="block text-xs font-bold uppercase tracking-wider text-gold-light mb-2">
+                                Pickup Date *
+                            </label>
+                            <div class="relative">
+                                <input type="date" id="pickup-date" required
+                                       class="w-full bg-obsidian border border-neutral-700 focus:border-gold rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Return Date -->
+                        <div>
+                            <label for="return-date" class="block text-xs font-bold uppercase tracking-wider text-gold-light mb-2">
+                                Return Date *
+                            </label>
+                            <div class="relative">
+                                <input type="date" id="return-date" required
+                                       class="w-full bg-obsidian border border-neutral-700 focus:border-gold rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-gold/20 transition-all">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inline Form Error/Alert Banner -->
+                    <div id="form-warning" class="hidden p-3.5 rounded-xl bg-amber-500/15 border border-amber-500/40 text-amber-200 text-xs sm:text-sm flex items-center gap-2.5">
+                        <i data-lucide="alert-circle" class="w-4 h-4 text-amber-400 shrink-0"></i>
+                        <span id="form-warning-text">Please fill in your Name and Mobile Number first.</span>
+                    </div>
+
+                    <!-- Dual Submit Buttons -->
+                    <div class="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button type="button" onclick="sendViaWhatsApp()"
+                                class="w-full py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-900/30 cursor-pointer">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Send Booking via WhatsApp</span>
+                        </button>
+
+                        <button type="submit"
+                                class="btn-gold w-full py-4 px-6 rounded-2xl font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-lg cursor-pointer">
+                            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            <span>Instant Booking Request</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. CONTACT, LOCATION & FOOTER SECTION ==================== -->
+    <footer id="contact" class="bg-obsidian pt-20 pb-28 sm:pb-14 border-t border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-14 border-b border-neutral-800/80">
+                
+                <!-- Contact Details Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-[0.25em] text-gold">Visit or Reach Us</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
+                            Trust Drive <span class="text-gold-gradient">Ambikapur</span>
+                        </h2>
+                        <p class="text-sm text-neutral-400 mt-2">
+                            Your trusted travel partner in Surguja. Open 24/7 for bookings, inquiries, and emergency roadside assistance.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Phone & WhatsApp -->
+                        <div class="glass-card p-4 rounded-2xl flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs uppercase tracking-wider text-neutral-400 font-semibold">Phone &amp; WhatsApp (24/7)</div>
+                                <div class="flex flex-wrap items-center gap-3 mt-1">
+                                    <a href="tel:+919111667692" class="text-lg font-bold text-white hover:text-gold transition-colors">
+                                        +91 91116 67692
+                                    </a>
+                                    <a href="https://wa.me/919111667692" target="_blank" rel="noopener noreferrer" class="text-xs px-2.5 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold hover:bg-emerald-500/25">
+                                        Chat on WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Area -->
+                        <div class="glass-card p-4 rounded-2xl flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                                <i data-lucide="navigation" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs uppercase tracking-wider text-neutral-400 font-semibold">Primary Service Area</div>
+                                <div class="text-base font-bold text-white mt-0.5">
+                                    Ambikapur, Surguja, Chhattisgarh
+                                </div>
+                                <div class="text-xs text-neutral-400 mt-0.5">
+                                    Outstation drops across Chhattisgarh, Jharkhand, UP &amp; MP
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Full Office Address -->
+                        <div class="glass-card p-4 rounded-2xl flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-xl bg-gold/15 border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs uppercase tracking-wider text-neutral-400 font-semibold">Office Address</div>
+                                <address class="not-italic text-sm font-medium text-neutral-200 mt-1 leading-relaxed">
+                                    Chandani Chowk, Khairbar Rd, Bhagawan Pur, Nawagarh, Ambikapur, Chhattisgarh 497001, India
+                                </address>
+                                <a href="https://www.google.com/maps/search/?api=1&query=Chandani+Chowk+Khairbar+Rd+Bhagawan+Pur+Nawagarh+Ambikapur+Chhattisgarh+497001" target="_blank" rel="noopener noreferrer"
+                                   class="inline-flex items-center gap-1.5 text-xs font-bold text-gold hover:text-gold-light mt-2.5">
+                                    <span>Get Directions on Google Maps</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Embed Column -->
+                <div class="lg:col-span-7 flex flex-col">
+                    <div class="glass-card rounded-3xl overflow-hidden flex-1 min-h-[340px] flex flex-col border-gold/30">
+                        <div class="px-5 py-3.5 bg-charcoal border-b border-gold/15 flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-xs font-semibold text-gold-light">
+                                <span class="w-2 h-2 rounded-full bg-gold"></span>
+                                <span>Chandani Chowk, Ambikapur 497001</span>
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Chandani+Chowk+Khairbar+Rd+Bhagawan+Pur+Nawagarh+Ambikapur+Chhattisgarh+497001" target="_blank" rel="noopener noreferrer"
+                               class="text-xs font-bold px-3 py-1.5 rounded-lg bg-gold/15 hover:bg-gold hover:text-obsidian text-gold-light transition-all flex items-center gap-1.5">
+                                <i data-lucide="map" class="w-3.5 h-3.5"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                        <div class="relative flex-1 w-full min-h-[300px] bg-neutral-900">
+                            <iframe 
+                                title="Trust Drive Ambikapur Location Map"
+                                src="https://maps.google.com/maps?q=Chandani%20Chowk,%20Khairbar%20Rd,%20Bhagawan%20Pur,%20Nawagarh,%20Ambikapur,%20Chhattisgarh%20497001&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                class="w-full h-full absolute inset-0 border-0 filter contrast-105"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+                <div class="flex items-center gap-2">
+                    <span class="font-serif font-bold text-gold text-sm tracking-wider">TRUST DRIVE</span>
+                    <span>•</span>
+                    <span>© 2026 All Rights Reserved.</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="#home" class="hover:text-gold transition-colors">Home</a>
+                    <a href="#services" class="hover:text-gold transition-colors">Services</a>
+                    <a href="#fleet" class="hover:text-gold transition-colors">Fleet</a>
+                    <a href="#booking" class="hover:text-gold transition-colors">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP & CALL BUTTONS ==================== -->
+    <div class="fixed bottom-5 right-5 z-40 flex flex-col gap-3">
+        <!-- Floating Call Button -->
+        <a href="tel:+919111667692" aria-label="Call Trust Drive"
+           class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-charcoal border-2 border-gold text-gold hover:bg-gold hover:text-obsidian shadow-2xl shadow-black flex items-center justify-center transition-all hover:scale-105">
+            <i data-lucide="phone-call" class="w-6 h-6"></i>
+        </a>
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/919111667692?text=Hello%20Trust%20Drive%2C%20I%20want%20to%20book%20a%20car%20in%20Ambikapur." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"
+           class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-2xl shadow-emerald-950/60 flex items-center justify-center transition-all hover:scale-105">
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+        </a>
+    </div>
+
+    <!-- ==================== INSTANT BOOKING CONFIRMATION MODAL ==================== -->
+    <div id="confirmation-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-charcoal border border-gold/50 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative animate-fade-in">
+            <button onclick="closeModal()" aria-label="Close Modal" class="absolute top-5 right-5 text-neutral-400 hover:text-white p-1.5 rounded-lg bg-neutral-800/70">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-light via-gold to-gold-dark text-obsidian flex items-center justify-center mx-auto mb-5 shadow-lg shadow-gold/25">
+                <i data-lucide="check-circle-2" class="w-9 h-9"></i>
+            </div>
+
+            <h3 class="font-serif text-2xl font-bold text-center text-white mb-2">
+                Booking Request <span class="text-gold-gradient">Received!</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-neutral-400 text-center mb-6">
+                Thank you for choosing <strong class="text-white">Trust Drive Ambikapur</strong>. Here is your reservation summary:
+            </p>
+
+            <!-- Summary Box -->
+            <div id="modal-summary-content" class="bg-obsidian border border-gold/25 rounded-2xl p-4 space-y-2.5 text-xs sm:text-sm mb-6">
+                <!-- Populated dynamically via JS -->
+            </div>
+
+            <div class="space-y-3">
+                <a id="modal-whatsapp-link" href="https://wa.me/919111667692" target="_blank" rel="noopener noreferrer"
+                   class="w-full py-3.5 px-5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Confirm Instantly on WhatsApp</span>
+                </a>
+                <a href="tel:+919111667692"
+                   class="btn-gold w-full py-3.5 px-5 rounded-xl font-bold text-sm flex items-center justify-center gap-2">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                    <span>Call +91 91116 67692 Now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set default pickup and return dates (Today & Tomorrow)
+        window.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+
+            const formatDate = (date) => date.toISOString().split('T')[0];
+            
+            const pickupInput = document.getElementById('pickup-date');
+            const returnInput = document.getElementById('return-date');
+            
+            pickupInput.min = formatDate(today);
+            pickupInput.value = formatDate(today);
+            
+            returnInput.min = formatDate(today);
+            returnInput.value = formatDate(tomorrow);
+
+            pickupInput.addEventListener('change', () => {
+                if (returnInput.value < pickupInput.value) {
+                    returnInput.value = pickupInput.value;
+                }
+                returnInput.min = pickupInput.value;
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Pre-select Car from Fleet Cards & Scroll to Booking Form
+        function selectCarAndScroll(carValue) {
+            const carSelect = document.getElementById('select-car');
+            carSelect.value = carValue;
+            
+            const bookingSection = document.getElementById('booking');
+            bookingSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Highlight select box briefly
+            carSelect.classList.add('ring-2', 'ring-gold');
+            setTimeout(() => {
+                carSelect.classList.remove('ring-2', 'ring-gold');
+            }, 1500);
+        }
+
+        // Pre-select Service from Service Cards
+        function preselectService(serviceValue) {
+            const serviceSelect = document.getElementById('service-type');
+            serviceSelect.value = serviceValue;
+        }
+
+        // Helper: Gather & Validate Form Data
+        function getBookingDetails() {
+            const name = document.getElementById('customer-name').value.trim();
+            const phone = document.getElementById('customer-phone').value.trim();
+            const car = document.getElementById('select-car').value;
+            const service = document.getElementById('service-type').value;
+            const location = document.getElementById('pickup-location').value.trim() || 'Ambikapur';
+            const pickupDate = document.getElementById('pickup-date').value;
+            const returnDate = document.getElementById('return-date').value;
+
+            return { name, phone, car, service, location, pickupDate, returnDate };
+        }
+
+        function showWarning(msg) {
+            const warningEl = document.getElementById('form-warning');
+            const warningText = document.getElementById('form-warning-text');
+            warningText.textContent = msg;
+            warningEl.classList.remove('hidden');
+            setTimeout(() => {
+                warningEl.classList.add('hidden');
+            }, 4000);
+        }
+
+        // Build formatted WhatsApp Message
+        function buildWhatsAppMessage(details) {
+            const message = `🚗 *NEW BOOKING INQUIRY - TRUST DRIVE*
+
+👤 *Name:* ${details.name}
+📞 *Phone:* ${details.phone}
+🚘 *Selected Car:* ${details.car}
+🛎️ *Service Type:* ${details.service}
+📍 *Pickup Location:* ${details.location}
+📅 *Pickup Date:* ${details.pickupDate}
+🔄 *Return Date:* ${details.returnDate}
+
+Please confirm availability for my trip.`;
+            return encodeURIComponent(message);
+        }
+
+        // Action 1: Send Booking via WhatsApp
+        function sendViaWhatsApp() {
+            const details = getBookingDetails();
+            if (!details.name || !details.phone) {
+                showWarning('Please enter your Full Name and Mobile Number before sending via WhatsApp.');
+                return;
+            }
+            const encodedMsg = buildWhatsAppMessage(details);
+            const whatsappUrl = `https://wa.me/919111667692?text=${encodedMsg}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Action 2: Instant Booking Request Modal
+        function handleInstantRequest(event) {
+            event.preventDefault();
+            const details = getBookingDetails();
+            
+            if (!details.name || !details.phone) {
+                showWarning('Please fill in all required fields.');
+                return;
+            }
+
+            const summaryContainer = document.getElementById('modal-summary-content');
+            summaryContainer.innerHTML = `
+                <div class="flex justify-between gap-2 border-b border-neutral-800 pb-2">
+                    <span class="text-neutral-400">Customer:</span>
+                    <span class="font-bold text-white text-right">${escapeHTML(details.name)}</span>
+                </div>
+                <div class="flex justify-between gap-2 border-b border-neutral-800 pb-2">
+                    <span class="text-neutral-400">Mobile:</span>
+                    <span class="font-bold text-white text-right">${escapeHTML(details.phone)}</span>
+                </div>
+                <div class="flex justify-between gap-2 border-b border-neutral-800 pb-2">
+                    <span class="text-neutral-400">Selected Car:</span>
+                    <span class="font-bold text-gold-light text-right">${escapeHTML(details.car)}</span>
+                </div>
+                <div class="flex justify-between gap-2 border-b border-neutral-800 pb-2">
+                    <span class="text-neutral-400">Service:</span>
+                    <span class="font-semibold text-white text-right">${escapeHTML(details.service)}</span>
+                </div>
+                <div class="flex justify-between gap-2 border-b border-neutral-800 pb-2">
+                    <span class="text-neutral-400">Pickup:</span>
+                    <span class="font-semibold text-white text-right">${escapeHTML(details.location)}</span>
+                </div>
+                <div class="flex justify-between gap-2">
+                    <span class="text-neutral-400">Dates:</span>
+                    <span class="font-semibold text-white text-right">${escapeHTML(details.pickupDate)} → ${escapeHTML(details.returnDate)}</span>
+                </div>
+            `;
+
+            // Update Modal WhatsApp confirmation link
+            const encodedMsg = buildWhatsAppMessage(details);
+            document.getElementById('modal-whatsapp-link').href = `https://wa.me/919111667692?text=${encodedMsg}`;
+
+            // Show Modal
+            document.getElementById('confirmation-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('confirmation-modal').classList.add('hidden');
+        }
+
+        // Prevent XSS in dynamic summary rendering
+        function escapeHTML(str) {
+            return str.replace(/[&<>"']/g, function(m) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#39;'
+                }[m];
+            });
+        }
+    </script>
+</body>
+</html>
